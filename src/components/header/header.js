@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom'
 
 const Header = () => (
   <Row>  
-    <Navbar className="grey darken-2">
+    <Navbar className="green">
       <NavItem href='/'>Home</NavItem>
       <NavItem href='/contact'>Contact</NavItem>
     </Navbar>

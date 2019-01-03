@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 
-export default class FeedbackForm extends Component {
+export default class Feedback extends Component {
   state = {
     feedback: '',
     formSubmitted: false
@@ -85,6 +85,6 @@ export default class FeedbackForm extends Component {
   }
 }
 
-FeedbackForm.propTypes = {
+Feedback.propTypes = {
   env: PropTypes.object.isRequired
 };

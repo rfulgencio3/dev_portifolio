@@ -1,7 +1,7 @@
 // Importando o React
 import React from "react";
 // Importando os components necessários da lib react-materialize
-import { Row, Col, Card, Input, Button } from 'react-materialize';
+import { Row, Col } from 'react-materialize';
 
 const Not_Found = () => (
   <Row>
