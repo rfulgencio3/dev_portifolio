@@ -1,122 +1,98 @@
 // Importando o React
 import React, { Component } from 'react';
-// Importando os components necessários da lib react-materialize
+// Importando os component necessários da lib react-materialize
 import { Row, Col, Card, Input, Button } from 'react-materialize';
-// Importando o componenet UserProfile
+// Importando o component UserProfile
 import UserProfile from '../user_profile/user_profile'
-// Importando o componenet Feedback
-import Feedback from '../feedback/feedback'
-import PropTypes from 'prop-types';
+// Importando o component EmailJs
+import * as emailjs from 'emailjs-com';
+import { toast } from 'react-toastify';
 
-const Contact = () => (
-  <Row>
-    <Col m={3} s={12}>
-      <UserProfile />
-    </Col>
-    <Col m={8} s={12}>
-        <h5>Contact</h5>
-        <Card>
-          <Row>
-              <Input placeholder="Say My Name! Ops.. your name." label="Name" s={12} />
-              <Input placeholder="Subject Mother F%#!*$." label="Subject" s={12} />
-              <Input placeholder="What are would to say?" label="Message" s={12} />
-            <Col s={12} m={12}>
-            <button class="btn waves-effect waves-light green right" type="submit" name="action">Submit
-            <i class="material-icons right">send</i>
-            </button>
-            </Col>
-          </Row>
-        </Card>
-    </Col>
-  </Row>
-);
+
+class Contact extends Component {
+
+    componentWillMount() {
+        emailjs.init('user_xj2bAzEaj0YoSEsknhevv');
+    }
+
+    submit = () => {
+        // Change all values to your own
+        let params = {
+            user_id: 'user_xj2bAzEaj0YoSEsknhevv',
+            access_token: 'f5c0fe6534143fa5729b81a1b101e1ec',
+            service_id: 'devteam_mailgun',
+            template_id: 'template_oOOrmheb_clone',
+            template_params: {
+                'from_name': this.refs.txtName.value,
+                'subject_msg': document.getElementById("subject").value,
+                'message_html': document.getElementById("message").value
+            }
+        };
+
+        let headers = {
+            "Content-type": "application/json"
+        };
+
+        let options = {
+            method: 'POST',
+            headers: headers,
+            body: JSON.stringify(params)
+        };
+
+        fetch('https://api.emailjs.com/api/v1.0/email/send', options)
+            .then((httpResponse) => {
+                if (httpResponse.ok) {
+                    toast.success('Message send!');
+                } else {
+                    return httpResponse.text()
+                        .then(text => Promise.reject(text));
+                }
+            })
+            .catch((error) => {
+                toast.error('Oops... ' + error);
+            });
+    }
+
+    clearForm = () => {
+        document.getElementById("name").value = "";
+        document.getElementById("subject").value = "";
+        document.getElementById("message").value = "";
+    }
+
+    render() {
+        return(
+            <Row>
+                <Col m={3} s={12}>
+                    <UserProfile />
+                </Col>
+                <Col m={8} s={12}>
+                    <h5>Contact</h5>
+                    <Card>
+                        <Row id="RowList">
+                            <Input placeholder="Say My Name! Ops.. your name." label="Name" s={12} id="name" ref="txtName" />
+                            <Input placeholder="Subject Mother F%#!*$." label="Subject" s={12} id="subject" ref="txtSubject" />
+                            <Input placeholder="What would you like to say?" label="Message" s={12} id="message" ref="txMessage" />
+                            <Col s={12} m={12}>
+                                <button class="btn waves-effect waves-light green right" type="submit" name="action" id="btnEnviar" onClick={this.submit}>Submit
+                        <i class="material-icons right">send</i>
+                                </button>
+                                <button class="btn waves-effect waves-light blue lighten-2 center" type="submit" name="cancel" id="btLimpar" onClick={this.clearForm}>Clear
+                        <i class="material-icons right">clear_all</i>
+                                </button>
+                            </Col>
+                        </Row>
+                    </Card>
+                </Col>
+            </Row>
+        )
+    }
+}
+
+// emailjs.send('devteam_mailgun', 'template_oOOrmheb_clone', templateParams)
+//   .then(function(response) {
+//      console.log('SUCCESS!', response.status, response.text);
+//   }, function(error) {
+//      console.log('FAILED...', error);
+//   });
 
 export default Contact;
-
-// export default class FeedbackForm extends Component {
-//   state = {
-//     feedback: '',
-//     formSubmitted: false
-//   };
-
-//   handleCancel = this.handleCancel.bind(this);
-//   handleChange = this.handleChange.bind(this);
-//   handleSubmit = this.handleSubmit.bind(this);
-
-//   static sender = 'sender@example.com';
-
-//   handleCancel() {
-//     this.setState({
-//       feedback: ''
-//     });
-//   }
-
-//   handleChange(event) {
-//     this.setState({
-//       feedback: event.target.value
-//     });
-//   }
-
-//   handleSubmit(event) {
-//     event.preventDefault();
-
-//     const {
-//       REACT_APP_EMAILJS_RECEIVER: receiverEmail,
-//       REACT_APP_EMAILJS_TEMPLATEID: template
-//     } = this.props.env;
-
-//     this.sendFeedback(
-//       template,
-//       this.sender,
-//       receiverEmail,
-//       this.state.feedback
-//     );
-
-//     this.setState({
-//       formSubmitted: true
-//     });
-//   }
-
-//   sendFeedback(templateId, senderEmail, receiverEmail, feedback) {
-//     window.emailjs
-//       .send('mailgun', templateId, {
-//         senderEmail,
-//         receiverEmail,
-//         feedback
-//       })
-//       .then(res => {
-//         this.setState({
-//           formEmailSent: true
-//         });
-//       })
-//       // Handle errors here however you like
-//       .catch(err => console.error('Failed to send feedback. Error: ', err));
-//   }
-
-//   render() {
-//     return (
-//       <form className="feedback-form" onSubmit={this.handleSubmit}>
-//         <h1>Your Feedback</h1>
-//         <textarea
-//           className="text-input"
-//           id="feedback-entry"
-//           name="feedback-entry"
-//           onChange={this.handleChange}
-//           placeholder="Enter your feedback here"
-//           required
-//           value={this.state.feedback}
-//         />
-//         <div className="btn-group">
-//           <button className="btn btn--cancel" onClick={this.handleCancel}>
-//             Cancel
-//           </button>
-//           <input type="submit" value="Submit" className="btn btn--submit" />
-//         </div>
-//       </form>
-//     );
-//   }
-// }
-
-// FeedbackForm.propTypes = {
-//   env: PropTypes.object.isRequired
-// };

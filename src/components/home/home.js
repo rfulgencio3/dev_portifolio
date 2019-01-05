@@ -6,10 +6,12 @@ import { Row, Col, Card } from 'react-materialize';
 import UserProfile from '../user_profile/user_profile'
 // Importando o component Experience
 import Experience from '../experience/experience'
-// Importando o avatar da empresa 1
+// Importando o avatar das empresas
 import company_avatar from '../../images/company.png';
-// Importando o avatar da empresa 1
 import company_avatar2 from '../../images/company2.png';
+import company_avatar3 from '../../images/company3.png';
+import company_avatar4 from '../../images/company4.png';
+
 
 const Home = () => (
   <Row>
@@ -40,7 +42,17 @@ const Home = () => (
                     company="Twitter"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laborevoluptate velit esse cillum dolore eu fugiat id est laborum."
                     avatar={company_avatar2}                    
-        /> 
+        />
+        <Experience title="Analyst"
+                    company="LinkedIn"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laborevoluptate velit esse cillum dolore eu fugiat id est laborum."
+                    avatar={company_avatar3}
+        />
+        <Experience title="Dev"
+                    company="Zema"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laborevoluptate velit esse cillum dolore eu fugiat id est laborum."
+                    avatar={company_avatar4}
+        />
     </Col>
   </Row>
 );

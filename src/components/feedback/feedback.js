@@ -11,7 +11,7 @@ export default class Feedback extends Component {
   handleChange = this.handleChange.bind(this);
   handleSubmit = this.handleSubmit.bind(this);
 
-  static sender = 'nao-responda@xGH.com';
+  static sender = 'no-reply@xGH.com';
 
   handleCancel() {
     this.setState({
