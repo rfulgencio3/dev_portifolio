@@ -1,0 +1,35 @@
+// Importando o React
+import React, {Component} from "react";
+// Importando Row de 'react-materialize'
+import { Row } from 'react-materialize';
+// Importando Font-Awesome
+import { FaLinkedinIn, FaLinkedin, IconButton } from 'react-icons/fa'
+
+
+class MyFooter extends Component {
+    render() {
+        var data = new Date();
+        var ano = data.getFullYear();
+        return (
+            <Row>
+                <footer class="page-footer green">
+                    <div class="container">
+                        <div class="row">
+                        </div>
+                    </div>
+                    <div class="footer-copyright">
+                        <div class="container grey-text text-lighten-2">
+                            <strong>© {ano}</strong> <i>Developed with</i> ❤️ 
+                            <a class="black-text text-lighten-1">by <a class="grey-text text-lighten-4" href="https://github.com/rfulgencio3" target="_blank">Ricardo <a class="footnote grey-text text-lighten-3"><strong>'rfulgencio3'</strong></a> Fulgencio :)</a></a>
+                            <a class="right"/><a class="blue-text text-lighten-4 right " href="https://www.linkedin.com/in/ricardofulgencio/" target="_blank">/ricardo<strong>fulgencio</strong></a> 
+                            <FaLinkedin class="right" size={25} />
+                            
+                        </div>
+                    </div>
+                </footer>
+            </Row>
+        )
+    }
+}
+
+export default MyFooter;

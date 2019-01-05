@@ -2,8 +2,14 @@
 import React, { Component } from 'react';
 // Importando o Component Header
 import Header from './components/header/header'
+// Importando o component Footer
+import MyFooter from './components/footer/footer'
 // Importando o component Main
 import Main from './main'
+// Importando o Toastify
+import { ToastContainer } from 'react-toastify';
+// Importando FontAwesomeIcon
+import { FaLinkedin } from 'react-icons/fa'
 
 class App extends Component {
   render() {
@@ -11,6 +17,9 @@ class App extends Component {
       <div>
         <Header />
         <Main />
+        <MyFooter />
+        <ToastContainer position="top-center" autoClose={3000} />
+        <FaLinkedin />
       </div>
     );
   }
