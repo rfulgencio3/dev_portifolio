@@ -15,9 +15,7 @@ const Not_Found = () => (
         <Row>
     <Col m={8} s={20}>
         <h3 class="orange-text text-lighten-1">Error <strong>404</strong> - Page Not Found!</h3>
-         <h5>
-          <p>Hi Bro!</p>
-          <p>This page don´t exists :´(</p>
+         <h5><h2 class="grey-text">:(</h2>
           <p>Please step back <a href='./'>here! </a> :D</p>
          </h5>
     </Col>
@@ -26,6 +24,5 @@ const Not_Found = () => (
     </Col>
   </Row>
 );
-
 
 export default Not_Found;
