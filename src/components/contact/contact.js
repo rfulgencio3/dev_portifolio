@@ -23,7 +23,7 @@ class Contact extends Component {
             service_id: 'devteam_mailgun',
             template_id: 'template_oOOrmheb_clone',
             template_params: {
-                'from_name': this.refs.txtName.value,
+                'from_name': document.getElementById("subject").value,
                 'subject_msg': document.getElementById("subject").value,
                 'message_html': document.getElementById("message").value
             }
@@ -69,9 +69,9 @@ class Contact extends Component {
                     <h5>Contact</h5>
                     <Card>
                         <Row id="RowList">
-                            <Input placeholder="Say My Name! Ops.. your name." label="Name" s={12} id="name" ref="txtName" />
-                            <Input placeholder="Subject Mother F%#!*$." label="Subject" s={12} id="subject" ref="txtSubject" />
-                            <Input placeholder="What would you like to say?" label="Message" s={12} id="message" ref="txMessage" />
+                            <Input placeholder="Say My Name! Ops.. your name." label="Name" s={12} id="name" ref="txtName" required />
+                            <Input placeholder="Subject Mother F%#!*$." label="Subject" s={12} id="subject" ref="txtSubject" required />
+                            <Input placeholder="What would you like to say?" label="Message" s={12} id="message" ref="txMessage" required />
                             <Col s={12} m={12}>
                                 <button class="btn waves-effect waves-light green right" type="submit" name="action" id="btnEnviar" onClick={this.submit}>Submit
                         <i class="material-icons right">send</i>
