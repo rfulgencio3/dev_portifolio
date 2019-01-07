@@ -16,6 +16,9 @@ class Contact extends Component {
     }
 
     submit = () => {
+        if (document.getElementById("name").value = ''){
+            toast.warning('Name is empty.')
+        }
         // Change all values to your own
         let params = {
             user_id: 'user_xj2bAzEaj0YoSEsknhevv',

@@ -11,6 +11,8 @@ import company_avatar from '../../images/company.png';
 import company_avatar2 from '../../images/company2.png';
 import company_avatar3 from '../../images/company3.png';
 import company_avatar4 from '../../images/company4.png';
+import company_avatar5 from '../../images/company5.png';
+import company_avatar6 from '../../images/company6.png';
 
 
 const Home = () => (
@@ -52,6 +54,16 @@ const Home = () => (
                     company="Zema"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laborevoluptate velit esse cillum dolore eu fugiat id est laborum."
                     avatar={company_avatar4}
+        />
+        <Experience title="System Assistent"
+                    company="Uniaraxá"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laborevoluptate velit esse cillum dolore eu fugiat id est laborum."
+                    avatar={company_avatar6}
+        />
+        <Experience title="System Operator"
+                    company="Casa Cruzeiro"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laborevoluptate velit esse cillum dolore eu fugiat id est laborum."
+                    avatar={company_avatar5}
         />
     </Col>
   </Row>
