@@ -8,8 +8,6 @@ import MyFooter from './components/footer/footer'
 import Main from './main'
 // Importando o Toastify
 import { ToastContainer } from 'react-toastify';
-// Importando FontAwesomeIcon
-import { FaLinkedin } from 'react-icons/fa'
 
 class App extends Component {
   render() {
@@ -19,7 +17,6 @@ class App extends Component {
         <Main />
         <MyFooter />
         <ToastContainer position="top-center" autoClose={3000} />
-        <FaLinkedin />
       </div>
     );
   }

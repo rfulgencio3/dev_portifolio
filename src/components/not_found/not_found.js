@@ -11,22 +11,18 @@ const Not_Found = () => (
       <UserProfile />
     </Col>
     <Col m={8} s={12}>
-        <h5>Not found!</h5>
         <Card>
         <Row>
     <Col m={8} s={20}>
-        <h5>Beeeeeep!</h5>
-         <h3>
-          <p>Hi Bro!</p>
-          <p>This page don´t exists :´(</p>
-          <p>Please step back! :D</p>
-         </h3>
+        <h3 class="orange-text text-lighten-1">Error <strong>404</strong> - Page Not Found!</h3>
+         <h5><h2 class="grey-text">:(</h2>
+          <p>Please step back <a href='./'>here! </a> :D</p>
+         </h5>
     </Col>
         </Row>
         </Card>
     </Col>
   </Row>
 );
-
 
 export default Not_Found;
