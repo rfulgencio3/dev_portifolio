@@ -16,7 +16,7 @@ class App extends Component {
         <Header />
         <Main />
         <MyFooter />
-        <ToastContainer position="top-center" autoClose={3000} />
+        <ToastContainer position="top-center" autoClose={4000} allowTransparency="true" />
       </div>
     );
   }
