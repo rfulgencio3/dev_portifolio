@@ -60,11 +60,6 @@ const Home = () => (
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laborevoluptate velit esse cillum dolore eu fugiat id est laborum."
                     avatar={company_avatar6}
         />
-        <Experience title="System Operator"
-                    company="Casa Cruzeiro"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laborevoluptate velit esse cillum dolore eu fugiat id est laborum."
-                    avatar={company_avatar5}
-        />
     </Col>
   </Row>
 );
