@@ -13,8 +13,8 @@ const UserProfile = () => (
         </Col>
       </Row>
       <Row className="center-align">
-        <h5 >Lorem Ipsum</h5>
-        <p className="grey darken-2 white-text">FullStack Developer</p>
+        <h5 >Ricardo Fulgencio</h5>
+        <p className="green darken-1 white-text">FullStack Developer</p>
       </Row>
   </Card>
 );

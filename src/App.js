@@ -8,6 +8,8 @@ import MyFooter from './components/footer/footer'
 import Main from './main'
 // Importando o Toastify
 import { ToastContainer } from 'react-toastify';
+// Importando o ChatBot
+import Chatbot from './components/chatbot/chatbot';
 
 class App extends Component {
   render() {
@@ -17,6 +19,7 @@ class App extends Component {
         <Main />
         <MyFooter />
         <ToastContainer position="top-center" autoClose={4000} allowTransparency="true" />
+        <Chatbot />
       </div>
     );
   }

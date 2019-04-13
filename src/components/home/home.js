@@ -24,11 +24,13 @@ const Home = () => (
         <h5 className="subtitle">About Me</h5>
         <Card>
           <div>
-            <p><b>Lorem</b></p>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laborevoluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            <p><b>Personal Information</b></p>
+            <p>I'm a tech enthusiast.</p>
+            <p>I have experience in application development, I am doing graduate studies in software engineering and postgraduate in relational databases.</p>
             <br/>
-            <p><b>Ipsum</b></p>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laborevoluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            <p><b>Knowledge</b></p>
+            <p>I have knowledge in SQL Reaction Databases, Programming in ASP.Net, VB, C # and javascript.</p>
+            <p>Experience in work with agile methodologies.</p>
           </div>
         </Card>
         <h5 className="subtitle">Experiences</h5>
