@@ -11,7 +11,7 @@ import company_avatar from '../../images/company.png';
 import company_avatar2 from '../../images/company2.png';
 import company_avatar3 from '../../images/company3.png';
 import company_avatar4 from '../../images/company4.png';
-import company_avatar5 from '../../images/company5.png';
+//import company_avatar5 from '../../images/company5.png';
 import company_avatar6 from '../../images/company6.png';
 
 

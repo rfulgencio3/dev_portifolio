@@ -11,7 +11,7 @@ const Experience = (props) => (
                 <img src={props.avatar} className="circle responsive-img" />
                 { props.name }
             </Col>
-            <Col s={10} s={10}>
+            <Col s={10} m={10}>
                 <p><b>{props.title} in <span className="grey darken-5 white-text">{props.company}</span></b></p>
                 <p>{props.description}</p>
             </Col>
