@@ -8,7 +8,6 @@ import UserProfile from '../user_profile/user_profile'
 import * as emailjs from 'emailjs-com';
 import { toast } from 'react-toastify';
 
-
 class Contact extends Component {
 
     componentWillMount() {
@@ -19,7 +18,7 @@ class Contact extends Component {
         // Change all values to your own
         let params = {
             user_id: 'user_xj2bAzEaj0YoSEsknhevv',
-            access_token: 'f5c0fe6534143fa5729b81a1b101e1ec',
+            //access_token: 'f5c0fe6534143fa5729b81a1b101e1ec',
             service_id: 'devteam_mailgun',
             template_id: 'template_oOOrmheb_clone',
             template_params: {
@@ -51,6 +50,7 @@ class Contact extends Component {
             .catch((error) => {
                 toast.error('Oops... ' + error);
             });
+            console.log(options)
     }
 
     clearForm = () => {
