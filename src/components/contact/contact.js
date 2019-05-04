@@ -72,7 +72,7 @@ class Contact extends Component {
                             <Input placeholder="Say My Name! Ops.. your name." label="Name" s={12} id="name" ref="txtName" required />
                             <Input placeholder="Subject, please!" label="Subject" s={12} id="subject" ref="txtSubject" />
                             <Input placeholder="What would you like to say?" label="Message" s={12} id="message" ref="txMessage" />
-                            <Col s={12} m={12}>
+                            <Col s={12} m={12}> 
                                 <button class="btn waves-effect waves-light green right" type="submit" name="action" id="btnEnviar" onClick={this.submit}>Submit
                         <i class="material-icons right">send</i>
                                 </button>
