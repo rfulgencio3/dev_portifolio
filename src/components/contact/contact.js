@@ -66,7 +66,7 @@ class Contact extends Component {
                     <UserProfile />
                 </Col>
                 <Col m={8} s={12}>
-                    <h5>Contact</h5>
+                    <h5>Contact Me!</h5>
                     <Card>
                         <Row id="RowList">
                             <Input placeholder="Say My Name! Ops.. your name." label="Name" s={12} id="name" ref="txtName" required />

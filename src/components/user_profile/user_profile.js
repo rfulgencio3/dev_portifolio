@@ -14,7 +14,7 @@ const UserProfile = () => (
       </Row>
       <Row className="center-align">
         <h5 >Ricardo Fulgencio</h5>
-        <p className="green darken-1 white-text">FullStack Developer</p>
+        <p className="green darken-1 white-text">Developer</p>
       </Row>
   </Card>
 );
