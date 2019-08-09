@@ -9,11 +9,7 @@ const UserProfile = () => (
   <Card>
       <Row>
         <Col s={8} m={8} offset="s2 m2">
-<<<<<<< HEAD
           <img src={avatar} className="circle responsive-img" alt="circle avatar profile"/>
-=======
-          <img src={avatar} className="circle responsive-img" alt="Responsive circle"/>
->>>>>>> 381993a0870f95a660ad8934912c862b9ba4ca66
         </Col>
       </Row>
       <Row className="center-align">
