@@ -1,7 +1,7 @@
 // Importando o React
 import React, { Component } from 'react';
 // Importando os component necessários da lib react-materialize
-import { Row, Col, Card, Input, Button } from 'react-materialize';
+import { Row, Col, Card, Input } from 'react-materialize';
 // Importando o component UserProfile
 import UserProfile from '../user_profile/user_profile'
 // Importando o component EmailJs

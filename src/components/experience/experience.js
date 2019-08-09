@@ -3,12 +3,12 @@ import React from "react";
 // Importando os components necessários da lib react-materialize
 import { Row, Col, Card } from 'react-materialize';
 
-// Recebe os parâmetros passadados para o Componenet na variável props
+// Recebe os parâmetros passadados para o Component na variável props
 const Experience = (props) => (
     <Card>
         <Row>
             <Col s={2} m={2}>
-                <img src={props.avatar} className="circle responsive-img" />
+                <img src={props.avatar} className="circle responsive-img" alt="circle avatar profile"/>
                 { props.name }
             </Col>
             <Col s={10} m={10}>
